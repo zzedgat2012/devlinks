@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+.light {
+  --highlight-color: rgba(0, 0, 0, 0.1);
+}
+
 body {
   flex-shrink: 0;
   background-image: url("assets/bg-desktop-light.jpg");
@@ -170,66 +178,31 @@ a {
   }
 }
 
-#social-link {
+/* social links */
+#social-links {
   display: flex;
-  padding: 24px;
   justify-content: center;
-  align-items: flex-start;
-  gap: 16px;
-  align-self: stretch;
+
+  padding: 24px 0;
+
+  font-size: 24px;
 }
 
-#social-link-item-github {
-  width: 40px;
-  height: 40px;
-  background-image: url("assets/github-light.png");
-  background-size: cover;
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
 }
 
-@media (prefers-color-scheme: dark) {
-  #social-link-item-github {
-    background-image: url("assets/github.png");
-  }
+#social-links a:hover {
+  background: var(--highlight-color);
 }
 
-#social-link-item-instagram {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  background-image: url("assets/instagram-light.png");
-}
-
-@media (prefers-color-scheme: dark) {
-  #social-link-item-instagram {
-    background-image: url("assets/instagram.png");
-  }
-}
-
-#social-link-item-youtube {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  background-image: url("assets/youtube-light.png");
-}
-
-@media (prefers-color-scheme: dark) {
-  #social-link-item-youtube {
-    background-image: url("assets/youtube.png");
-  }
-}
-
-#social-link-item-linkedin {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  background-image: url("assets/linkedin-light.png");
-}
-
-@media (prefers-color-scheme: dark) {
-  #social-link-item-linkedin {
-    background-image: url("assets/linkedin.png");
-  }
-}
+/* footer */
 
 #footer {
   display: flex;
